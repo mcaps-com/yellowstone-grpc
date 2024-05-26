@@ -289,7 +289,8 @@ impl GeyserGrpcBuilder {
                 Some(x_token) => {
                     let x_token = x_token.try_into()?;
                     if x_token.is_empty() {
-                        return Err(GeyserGrpcBuilderError::InvalidXTokenLength(x_token.len()));
+                        //allow empty xtoken
+                        //return Err(GeyserGrpcBuilderError::InvalidXTokenLength(x_token.len()));
                     }
                     Some(x_token)
                 }
